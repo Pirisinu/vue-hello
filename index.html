@@ -16,12 +16,12 @@
   <div id="app">
     <h1>{{messaggio}}</h1>
     <img :class="effectSelected" :src="image" alt=""><br>
-    <select name="effects" id="effects">
-      <option value="opacity">opacity</option>
+    <select name="effects" id="effects" v-model="effectSelected">
+      <option selected value="">Seleziona un effetto</option>
+      <option  value="opacity">opacity</option>
       <option value="scale">scale</option>
       <option value="translate">translate</option>
     </select>
-    <button @click="applyEffect">Add Effect</button>
   </div>
   <script src="js/script.js"></script>
 </body>

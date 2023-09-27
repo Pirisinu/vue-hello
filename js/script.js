@@ -13,15 +13,15 @@ createApp({
   },
   methods: {
     applyEffect(){
-      if(effect.value =='opacity') effectSelected = 'opacity'; 
-      else if(effect.value =='scale') effectSelected = 'scale';
-      else if(effect.value =='translate') effectSelected = 'translate';
-
+      if(effect.value =='opacity') this.effectSelected = 'opacity'; 
+      else if(effect.value =='scale') this.effectSelected = 'scale';
+      else if(effect.value =='translate') this.effectSelected = 'translate';
+      else this.effectSelected = ''
     }
   },
   mounted(){
     
-    console.log(effectSelected)
     this.applyEffect()
+    
   }
 }).mount('#app');
