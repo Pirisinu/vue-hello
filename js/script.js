@@ -8,7 +8,6 @@ createApp({
     return{
       messaggio: 'Ciao da Vue',
       image: 'https://picsum.photos/400',
-
       effectSelected: ''
     }; 
   },
@@ -18,11 +17,11 @@ createApp({
       else if(effect.value =='scale') effectSelected = 'scale';
       else if(effect.value =='translate') effectSelected = 'translate';
 
-      console.log(effectSelected)
     }
   },
   mounted(){
     
-    applyEffect()
+    console.log(effectSelected)
+    this.applyEffect()
   }
 }).mount('#app');
