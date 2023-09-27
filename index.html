@@ -15,7 +15,13 @@
   
   <div id="app">
     <h1>{{messaggio}}</h1>
-    <img :src="image" alt=""><br>
+    <img :class="applyEffect" :src="image" alt=""><br>
+    <select name="effects" id="effects">
+      <option value="opacity">opacity</option>
+      <option value="scale">scale</option>
+      <option value="translate">translate</option>
+    </select>
+    <button @click="applyEffect">Add Effect</button>
   </div>
   <script src="js/script.js"></script>
 </body>
